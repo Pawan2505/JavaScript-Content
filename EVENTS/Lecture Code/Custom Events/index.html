@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Events Example</title>
+</head>
+
+<body>
+    <button id="triggerEvent">Trigger Custom Event</button>
+
+    <script>
+        // Create a custom event
+        let event = new CustomEvent("myCustomEvent", { detail: { message: "Hello World!" } });
+
+        // Dispatch the custom event
+        document.getElementById("triggerEvent").addEventListener("click", function () {
+            document.dispatchEvent(event);
+        });
+
+        // Listen for the custom event
+        document.addEventListener("myCustomEvent", function (event) {
+            console.log("Custom event triggered with data: " + event.detail.message);
+        });
+    </script>
+</body>
+
+</html>

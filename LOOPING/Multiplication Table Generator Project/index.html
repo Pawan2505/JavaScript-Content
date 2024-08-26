@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetition Logic Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Repetition Logic Project</h1>
+
+        <div class="section">
+            <h2>Multiplication Table Generator</h2>
+            <input type="number" id="multiplier" placeholder="Enter number">
+            <button onclick="generateTable()">Generate Table</button>
+            <div id="tableResult"></div>
+        </div>
+
+        <div class="section">
+            <h2>Number Counter</h2>
+            <input type="number" id="countTo" placeholder="Count up to">
+            <button onclick="countNumbers()">Count Numbers</button>
+            <div id="countResult"></div>
+        </div>
+
+        <div class="section">
+            <h2>Array Sum Calculator</h2>
+            <input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+            <button onclick="sumArray()">Calculate Sum</button>
+            <div id="sumResult"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

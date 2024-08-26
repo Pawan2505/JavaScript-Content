@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events Example</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            alert("Form submitted!");
+            event.preventDefault(); // Prevent the form from actually submitting
+        });
+    </script>
+</body>
+
+</html>

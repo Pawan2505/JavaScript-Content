@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopping Event Propagation Example</title>
+</head>
+
+<body>
+    <div id="parent" style="padding: 20px; background-color: lightgreen;">
+        Parent Div
+        <div id="child" style="padding: 20px; background-color: lightcoral;">
+            Child Div
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("child").addEventListener("click", function (event) {
+            event.stopPropagation(); // Stop the event from propagating further
+            alert("Child Div clicked, but propagation was stopped.");
+        });
+
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("Parent Div clicked");
+        });
+    </script>
+</body>
+
+</html>
